@@ -81,45 +81,20 @@
 (require 'init-darcs)
 (require 'init-git)
 (require 'init-github)
-
 (require 'init-projectile)
-
 (require 'init-compile)
 (require 'init-crontab)
-(require 'init-textile)
 (require 'init-markdown)
-(require 'init-csv)
-(require 'init-erlang)
-(require 'init-javascript)
-(require 'init-php)
 (require 'init-org)
-(require 'init-nxml)
-(require 'init-html)
-(require 'init-css)
-(require 'init-haml)
 (require 'init-http)
 (require 'init-python)
 (require 'init-haskell)
-(require 'init-elm)
-(require 'init-purescript)
-(require 'init-ruby)
-(require 'init-rails)
 (require 'init-sql)
-(require 'init-ocaml)
-(require 'init-nim)
 (require 'init-rust)
-(require 'init-toml)
-(require 'init-yaml)
 (require 'init-docker)
-(require 'init-terraform)
-(require 'init-nix)
-(maybe-require-package 'nginx-mode)
-
 (require 'init-paredit)
 (require 'init-lisp)
 (require 'init-slime)
-(require 'init-clojure)
-(require 'init-clojure-cider)
 (require 'init-common-lisp)
 
 (when *spell-check-support-enabled*
@@ -130,14 +105,13 @@
 (require 'init-folding)
 (require 'init-dash)
 
-;;(require 'init-twitter)
 ;; (require 'init-mu)
 (require 'init-ledger)
 ;; Extra packages which don't require any configuration
 
 (require-package 'sudo-edit)
 (require-package 'gnuplot)
-(require-package 'lua-mode)
+;; (require-package 'lua-mode)
 (require-package 'htmlize)
 (when *is-a-mac*
   (require-package 'osx-location))
@@ -170,19 +144,15 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
-
 ;;----------------------------------------------------------------------------
 ;; Locales (setting them earlier in this file doesn't work in X)
 ;;----------------------------------------------------------------------------
 (require 'init-locales)
 
-
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-local" containing personal settings
 ;;----------------------------------------------------------------------------
 (require 'init-local nil t)
-
-
 
 (provide 'init)
 
